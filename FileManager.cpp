@@ -13,3 +13,18 @@ vector<string> FileManager::getDirectories(string directoryPath)
 
 	return auxiliarVector;
 }
+
+vector<string> FileManager::getFiles(string directoryPath)
+{
+	vector<string> vectorAuxiliar;
+
+	for (const auto& file : directory_iterator(directoryPath)) {
+		vectorAuxiliar.push_back(file.path().filename().string());
+	}
+
+	for (int i = 0; i < vectorAuxiliar.size() - 1; i++) { 
+		cout << vectorAuxiliar[i] << endl; 
+	}
+
+	return vectorAuxiliar;
+}

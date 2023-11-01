@@ -13,6 +13,6 @@ private:
 public:
 	//vector<string> load(string path);
 	vector<string> getDirectories(string directoryPath);
-	//vector<string> getFiles(string directoryPath);
+	vector<string> getFiles(string directoryPath);
 };
 
